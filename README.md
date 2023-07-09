@@ -1,3 +1,9 @@
+### Welcome to the Cafe
+
+# Read on some snacks and drinks
+
+## Can upload your own menu items! (though it wont show until our API updates)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

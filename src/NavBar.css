@@ -1,0 +1,46 @@
+nav {
+  background-color: black;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+}
+
+.nav-item {
+  width: 140px;
+  text-align: center;
+  float: left;
+  justify-content: center;
+}
+
+.navbar-brand:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+nav a.active {
+  color: deepskyblue;
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  box-sizing: border-box;
+}
+
+nav a.active:hover {
+  color: skyblue;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: lightblue;
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+nav a.active.navbar-brand {
+  border-bottom: none;
+  color: deepskyblue;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+

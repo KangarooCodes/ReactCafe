@@ -1,0 +1,20 @@
+.Home-Title {
+	font-weight: bold;
+	text-shadow: black 0.1px 0.1px 1px;
+}
+
+.Home-Sub {
+	color: darkgray;
+	text-shadow: black 0.1px 0.1px 5px;
+	padding-top: 10px;
+}
+
+p {
+	font-size: 14px;
+	padding-top: 10px;
+	margin-bottom: 0;
+}
+
+span {
+	color: lightskyblue;
+}
