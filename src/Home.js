@@ -13,9 +13,9 @@ function Home({snacks, drinks}) {
             </h2>
           </CardTitle>
           <CardSubtitle>
-            <h5 className="Home-Sub">
+            <h6 className="Home-Sub">
               We Proudly Offer {drinks.length} Adult Beverages and {snacks.length} Snacks
-            </h5>
+            </h6>
           </CardSubtitle>
           <p>* Please Enjoy Responsibly</p>
         </CardBody>

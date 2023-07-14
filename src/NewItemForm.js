@@ -16,10 +16,11 @@ function Add({ newDrink, newSnack}) {
         const {name, value} = e.target;
         setFormData(formData => ({...formData, [name] : value}))
     }
-    const handleSubmit = () =>{
+    const handleSubmit = (e) =>{
+      e.preventDefault()
         let type = formData.menuType;
         delete formData.menuType;
-		if (type === "drinks") newDrink({...formData, id: formData.name})
+		    if (type === "drinks") newDrink({...formData, id: formData.name})
         if (type === "snacks") newSnack({...formData, id: formData.name })
 		setFormData(INTIAL_STATE)
 	}
