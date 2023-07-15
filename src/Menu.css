@@ -8,8 +8,29 @@
 
 .list-group a {
     margin-top: 1rem;
-    border-left: 5px dotted;
-    color: white;
+    border: 2px outset;
+    border-color: rgba(0, 0, 0, 0.4);
+    margin-bottom: 14px;
+}
+
+.list-group a:hover {
+    margin-top: 1rem;
+    border-left: 2px groove;
+    color: cyan;
+    border-color: rgba(0,255,255,.7);
+}
+
+.list-group a li {
+    padding-bottom: 0;
+}
+
+.menuDesc {
+    font-size: 14px;
+    display: flex;
+    float: left;
+    color: lightcoral;
+    text-shadow: black 0.1px 0.1px 3px;
+    padding-bottom: 8px;
 }
 
 .list-group a:not(:last-of-type) li {

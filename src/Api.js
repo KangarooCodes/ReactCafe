@@ -23,7 +23,7 @@ class SnackOrBoozeApi {
   // This should add items to the menu selected in form.
   static async set(items, menuType){
     const result = await axios.post(`${BASE_API_URL}/${menuType}`,items);
-    console.log(result);
+    return result.data;
   }
 
 }

@@ -26,16 +26,37 @@ function App() {
     getDrinksandSnacks();
   }, []);
 
-  const newDrink = drink =>{
+  async function newDrink(drink) {
     setDrinks(drinks => [...drinks, drink])
-    SnackOrBoozeApi.set(drink, "drinks")
+    let drinks = await SnackOrBoozeApi.getDrinks();
+    let drinkCheck = [];
+    for(let x in drinks){
+      drinkCheck.push(drinks[x].name.toLowerCase())
+    }
+    if(drinkCheck.includes(drink.name.toLowerCase())) {
+      alert('We already offer this beverage! Great minds think alike :)')
+      window.location.replace(`http://localhost:3000/Drinks/${drink.name}`);
+    } else { 
+      SnackOrBoozeApi.set(drink, "drinks")
+        window.location.replace(`http://localhost:3000/Drinks/${drink.name}`)
+    } 
   }
 
-  const newSnack = snack =>{
+  async function newSnack(snack) {
     setSnacks(snacks => [...snacks, snack])
-    SnackOrBoozeApi.set(snack, "snacks")
-  }  
-
+    let snacks = await SnackOrBoozeApi.getDrinks();
+    let snackCheck = [];
+    for(let x in snacks){
+      snackCheck.push(snacks[x].name.toLowerCase())
+    }
+    if(snackCheck.includes(snack.name.toLowerCase())) {
+      alert('We already offer this snack! Great minds think alike :)')
+      window.location.replace(`http://localhost:3000/Snacks/${snack.name}`);
+    } else { 
+      SnackOrBoozeApi.set(snack, "snacks")
+      window.location.replace(`http://localhost:3000/Snacks/${snack.name}`);
+    }
+}
   if (isLoading) {
     return <p className="loading">Loading ...</p>;
   }

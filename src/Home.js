@@ -8,14 +8,14 @@ function Home({snacks, drinks}) {
       <Card>
         <CardBody className="text-center">
           <CardTitle>
-            <h2 className="Home-Title">
-              Welcome to <span>Silicon Valley's</span> premier dive cafe!
-            </h2>
+            <p className="Home-Title">
+              Welcome to <span>Joey's</span> premier dive cafe!
+            </p>
           </CardTitle>
           <CardSubtitle>
-            <h6 className="Home-Sub">
+            <p className="Home-Sub">
               We Proudly Offer {drinks.length} Adult Beverages and {snacks.length} Snacks
-            </h6>
+            </p>
           </CardSubtitle>
           <p>* Please Enjoy Responsibly</p>
         </CardBody>

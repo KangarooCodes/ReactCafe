@@ -28,6 +28,7 @@ main {
 }
 
 .loading {
+  padding-top: 50px;
   width: 100vw;
   text-align: center;
   font-size: 50px;

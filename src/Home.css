@@ -1,12 +1,14 @@
 .Home-Title {
 	font-weight: bold;
 	text-shadow: black 0.1px 0.1px 1px;
+	font-size: 150%;
 }
 
 .Home-Sub {
 	color: darkgray;
 	text-shadow: black 0.1px 0.1px 5px;
 	padding-top: 10px;
+	font-size: 120%;
 }
 
 p {

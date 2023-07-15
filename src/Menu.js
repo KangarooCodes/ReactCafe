@@ -44,6 +44,7 @@ function FoodMenu({ snacks, drinks }) {
             {items.map(item => (
               <Link id={item.id} to={`/${link}/${item.id}`} key={item.id}>
                 <ListGroupItem>{item.name}</ListGroupItem>
+                <ListGroupItem><span className="menuDesc">{item.description}</span></ListGroupItem>
               </Link>
             ))}
           </ListGroup>

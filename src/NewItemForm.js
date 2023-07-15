@@ -17,17 +17,24 @@ function Add({ newDrink, newSnack}) {
         setFormData(formData => ({...formData, [name] : value}))
     }
     const handleSubmit = (e) =>{
-      e.preventDefault()
+        e.preventDefault();
         let type = formData.menuType;
+		    if (type === "drinks") newDrink({...formData, id: formData.name});
+        if (type === "snack") newSnack({...formData, id: formData.name });
         delete formData.menuType;
-		    if (type === "drinks") newDrink({...formData, id: formData.name})
-        if (type === "snacks") newSnack({...formData, id: formData.name })
-		setFormData(INTIAL_STATE)
+		    setFormData(INTIAL_STATE)
 	}
 
+    // check that form is working and fields are not empty before Enabling the submit button
 	const isFormFilled = () => {		
-		if(formData.name,formData.description,formData.recipe,formData.serve !== ""){
-			if(formData.name,formData.description,formData.recipe,formData.serve !== undefined){
+		if(formData.name !== "" &&
+      formData.description !== "" &&
+      formData.recipe !== "" &&
+      formData.serve !== "") {
+			if(formData.name !== undefined &&
+        formData.description !== undefined &&
+        formData.recipe !== undefined &&
+        formData.serve !== undefined){
 			document.getElementById("form-button").className=''
 			}
 		}
